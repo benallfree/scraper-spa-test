@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::post('/subscribers', function () {
+    $subscriber = App\Subscriber::create([
+        'email' => request()->get('email')
+    ]);
+
+    return ['status' => 'OK'];
 });
