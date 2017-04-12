@@ -1,0 +1,17 @@
+#landing_container {
+    /* landing page */
+    margin-top: 5rem;
+
+    #email {
+        display: inline-block;
+        width: 30rem;
+
+        &.error {
+            border-color: #d9534f;
+        }
+    }
+}
+
+#input_container {
+    margin-top: 3rem;
+}
