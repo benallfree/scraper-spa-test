@@ -41922,11 +41922,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("Please select one")]), _vm._v(" "), _c('option', {
     attrs: {
-      "value": "true"
+      "value": "1"
     }
   }, [_vm._v("Yes")]), _vm._v(" "), _c('option', {
     attrs: {
-      "value": "false"
+      "value": "0"
     }
   }, [_vm._v("No")])])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', [_c('label', {
     attrs: {
@@ -41961,11 +41961,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("Please select one")]), _vm._v(" "), _c('option', {
     attrs: {
-      "value": "true"
+      "value": "1"
     }
   }, [_vm._v("Yes")]), _vm._v(" "), _c('option', {
     attrs: {
-      "value": "false"
+      "value": "0"
     }
   }, [_vm._v("No")])])])]), _vm._v(" "), _c('br')]), _vm._v(" "), _c('div', {
     staticClass: "col-md-4"

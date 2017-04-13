@@ -95,8 +95,8 @@
                             <div>
                                 <select id="first_time_buyer" v-model="first_time_buyer" required>
                                     <option disabled value="">Please select one</option>
-                                    <option value="true">Yes</option>
-                                    <option value="false">No</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
                                 </select>
                             </div>
                         </div>
@@ -106,8 +106,8 @@
                             <div>
                                 <select id="new_construction" v-model="new_construction" required>
                                     <option disabled value="">Please select one</option>
-                                    <option value="true">Yes</option>
-                                    <option value="false">No</option>
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
                                 </select>
                             </div>
                         </div>
