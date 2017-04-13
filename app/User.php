@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Mail;
+use App\Mail\AlertConfirmation;
 
 class User extends Authenticatable
 {
@@ -15,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'email'
     ];
 
     /**
@@ -24,6 +26,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        
     ];
+
+    public function updatePreferences()
+    {
+        // To-do: Updated User Preferences
+        
+        Mail::to($this->email)->send(new AlertConfirmation($this->email)); 
+    }
 }
