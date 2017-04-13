@@ -21,7 +21,7 @@ Vue.component('success', require('./components/Success.vue'));
 const app = new Vue({
     el: '#app',
     data: {
-    	activeComponent: 'preferences',
+    	activeComponent: 'home',
     	email: ''
     },
     methods: {

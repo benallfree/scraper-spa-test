@@ -1035,7 +1035,7 @@ Vue.component('success', __webpack_require__(56));
 var app = new Vue({
   el: '#app',
   data: {
-    activeComponent: 'preferences',
+    activeComponent: 'home',
     email: ''
   },
   methods: {
