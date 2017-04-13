@@ -13,6 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/users', array('as' => 'users.store', 'uses' => 'UsersController@store'));
+Route::post('/users/preferences', array('as' => 'users.preferences', 'uses' => 'UsersController@updatePreferences'));

@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+Vue.prototype.$http = axios;
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -13,8 +14,23 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('home', require('./components/Home.vue'));
+Vue.component('preferences', require('./components/Preferences.vue'));
+Vue.component('success', require('./components/Success.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+    	activeComponent: 'home',
+    	email: ''
+    },
+    methods: {
+    	showPreferences: function(email) {
+    		this.email = email;
+    		this.activeComponent = 'preferences';
+    	},
+    	showSuccess: function() {
+    		this.activeComponent = 'success';
+    	}
+    }
 });
