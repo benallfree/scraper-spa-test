@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -13,8 +12,28 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('enter-email', require('./components/enter-email.vue'));
+Vue.component('enter-data', require('./components/enter-data.vue'));
+Vue.component('finish', require('./components/finish.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data() {
+        return {
+            step: 1
+        }
+    },
+    methods: {
+        nextStep() {
+            // send email for step 2
+            if (this.step == 2) {
+                axios.post('/email', this.$root.$data)
+                    .then(response => {
+                        // echo to console
+                        console.log(response);
+                    });
+            }
+            this.step++;
+        }
+    }
 });
