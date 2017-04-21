@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Home Page
+Route::get('/', 'AuthController@home');
+
+Route::post('/', 'AuthController@postRegister');
+
+// Todo Resources
+Route::group(['middleware' => 'auth'], function() {
+
+    Route::get('/register', 'UserController@home');
+    Route::post('/register', 'UserController@postRegister');
+    Route::get('/result', 'UserController@result');
+
 });
