@@ -9,7 +9,8 @@ Write an application that emails loan alerts.
 ## Instructions
 
 * Fork and clone this repo. It contains a Laravel 5.4 default installation.
-* Implement the user story below
+* Implement the user story below using VueJS and SPA (single page application) for all UI. Communication via API only; no page postbacks or refreshes.
+* Use a mobile-first design strategy for both UI and emails
 * Send a pull request to me ***along with your name*** when you're done or when it's been 2 hours. This step is super important; if you don't send a pull request, you definitely won't be hired.
 
 ## User Story
@@ -42,8 +43,6 @@ Write an application that emails loan alerts.
 ## Bonus points (in order of WOW factor)
 
 * Use of `composer` packages
-* Make emails mobile responsive
-* Use VueJS and SPA (single page application) for all UI. Communication via API only; no page postbacks or refreshes.
 * Use of `yarn`, `webpack`, and `es6` in the build process
 * PHP7 compatibility
 * Caching the query results for 60 minutes
